@@ -144,7 +144,7 @@ const appRoutes: Routes = [
  ChartModule,
   CommonModule,
  AgmCoreModule.forRoot(  {
-      apiKey: 'AIzaSyA2wjv-9kTedE315hpNOJtowDuKKXIA4T8',
+      apiKey: 'yourKey',
     libraries: ["places"]
   }),
   AngularFirestoreModule,
