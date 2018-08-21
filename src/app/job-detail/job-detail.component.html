@@ -1,0 +1,41 @@
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<div class="button-row">
+  <a mat-raised-button color="dark" [routerLink]="['/jobs']"><mat-icon class="white-icon">view_headline</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>{{job.companyname}}</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-grid-list cols="2" rowHeight="3rem">
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Job ID </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> {{job.jobid}} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Company </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b>{{ job.companyname }} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Designation </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b>{{ job.designation }} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Description </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> {{job.description}} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Website </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b>{{ job.website }} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Address </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b>{{ job.address }} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Vacancy </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b>{{job.vacancy}} </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b> Salary </b></mat-grid-tile>
+      <mat-grid-tile style="font-family: 'Didact Gothic'; font-size: 18px;"><b>{{ job.salary }} </b></mat-grid-tile>
+
+  </mat-grid-list>
+  <br>
+  <br>
+</mat-card-content>
+<mat-card-actions>
+  <div class="button-row">
+   <a mat-raised-button  color="dark" [routerLink]="['/job-edit', job._id]"><mat-icon class="white-icon">edit</mat-icon></a>
+   <a mat-raised-button  color="dark"  (click)="deleteJob(job._id)"><mat-icon class="white-icon">delete</mat-icon></a>
+ </div>
+ </mat-card-actions>
+</mat-card>

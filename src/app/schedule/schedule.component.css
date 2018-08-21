@@ -1,0 +1,32 @@
+.mat-card-header { justify-content: center;
+  padding-top: 2.2rem;
+background-color: #087C9E;
+color: white}
+h1 { font-family: 'Righteous'; color: white; font-size: 3.5rem;}
+.mat-card-content { justify-content: center; width: 90%;}
+a {background-color: #087C9E;}
+.white-icon {
+    color: white;
+}
+todocard{
+
+}
+.btn{
+  cursor: pointer;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.todoitem{
+  color:white;
+  text-overflow: ellipsis;
+  font-family: 'Righteous';
+}
+.done-true{
+  text-decoration: line-through white;
+  font-family: 'Righteous';
+
+}
+.done-false{
+  text-decoration: none;
+}

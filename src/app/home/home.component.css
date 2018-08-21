@@ -1,0 +1,21 @@
+.example-card {
+  max-width: 27rem;
+}
+
+
+.mat-card-header{ background-color: #087C9E}
+h1 { font-family: 'Righteous'; color: white; font-size: 3.5rem;}
+h2{ font-family: 'Righteous'; color: white; font-size: 25px;padding-left: 1.6rem;}
+p { font-family: 'Righteous'; color: white; font-size: 21px;}
+.mat-card-content{ background-color: #087C9E}
+.mat-card-title { font-family: 'Righteous'; color: white; font-size: 30px; margin-left: 1.2rem}
+.mat-card-subtitle  { font-family: 'Righteous'; color: white; font-size: 27px;margin-left: 8px;}
+.mat-tab { font-family: 'Righteous'; color: #087C9E; font-size: 20px;margin-left: 1.2rem}
+li { font-family: 'Righteous'; color: white; font-size: 22px;margin: 11px;}
+a {background-color: #087C9E;}
+.white-icon { color: white;}
+.mat-icon{
+  width: 100px;
+    height: 70px;
+    font-size: 45px;
+  margin-top: 5px;}

@@ -1,0 +1,12 @@
+.white-icon {
+    color: white;
+}
+.mat-card-header { justify-content: center;}
+a {background-color: #087C9E;}
+h1 { font-family: 'Righteous'; color: #087C9E; font-size: 3rem;}
+.example-card {
+  justify-content: center;
+  max-width: 40rem;
+  margin: auto;
+}
+.mat-card-actions {margin-left: 45%}

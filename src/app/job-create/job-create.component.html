@@ -1,0 +1,83 @@
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<div class="button-row">
+  <a mat-raised-button color="dark" [routerLink]="['/jobs']"><mat-icon class="white-icon">view_headline</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>New Job Post</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="jobForm" (ngSubmit)="onFormSubmit(jobForm.value)">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Job ID" formControlName="jobid"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('jobid').valid && jobForm.get('jobid').touched">Please enter Job ID: </span>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="What is the Company name?" formControlName="companyname"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('companyname').valid && jobForm.get('companyname').touched">Please enter Company Name: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="What is the designation?" formControlName="designation"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('designation').valid && jobForm.get('designation').touched">Please enter Job designation: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Skills Required" formControlName="description"
+               [errorStateMatcher]="matcher"></textarea>
+        <mat-error>
+          <span *ngIf="!jobForm.get('description').valid && jobForm.get('description').touched">Please enter Job Description: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="What is the website?" formControlName="website"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('website').valid && jobForm.get('website').touched">Please enter Company Website: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Where is it located?" formControlName="address"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('address').valid && jobForm.get('address').touched">Please enter company address: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="How many vacant positions?" formControlName="vacancy"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('vacancy').valid && jobForm.get('vacancy').touched">Please enter job vacancy: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Where is it approx. stipend per annum?" formControlName="salary"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!jobForm.get('salary').valid && jobForm.get('salary').touched">Please enter approx stipend: </span>
+        </mat-error>
+      </mat-form-field>
+        <br>
+      <div class="button-row">
+        <button type="submit" [disabled]="!jobForm.valid" class="back-color"><mat-icon class="white-icon">save</mat-icon></button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

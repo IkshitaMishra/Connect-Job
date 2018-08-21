@@ -1,0 +1,78 @@
+
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<br>
+<div style="background-color:#087C9E;">
+            <h1>ConnectJob</h1>
+            <p style="padding-top:-5px;">Admin Portal</p>
+</div>
+<br>
+<br>
+<mat-grid-list cols="3" rowHeight="4:1;" >
+  <mat-grid-tile colspan="1" rowspan="4">
+    <mat-card class="example-card">
+      <mat-card-header>
+          <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+        <mat-card-content>
+              <ul>
+                  <li *ngFor="let data of items">
+                    {{data}}
+                  </li>
+              </ul>
+        </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile  colspan="1" rowspan="1">
+    <div layout-fill style=" width:35rem;background-color: #087C9E;">
+      <div class="button-row">
+       <a  color="dark" [routerLink]="['/jobs']"><mat-icon class="white-icon">view_headline</mat-icon></a>
+          <h2>Dashboard</h2>
+       </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile  colspan="1" rowspan="1" >
+    <div layout-fill style="width:35rem;background-color: #087C9E;">
+      <div class="button-row">
+       <a  color="dark" [routerLink]="['/job-create']"><mat-icon class="white-icon">add</mat-icon></a>
+        <h2>Post</h2>
+      </div>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile  colspan="1" rowspan="1" >
+    <div layout-fill style=" width:35rem;background-color: #087C9E;">
+      <div class="button-row">
+       <a  color="dark" [routerLink]="['/schedule']"><mat-icon class="white-icon">calendar_today</mat-icon></a>
+        <h2>Create Events</h2>
+      </div>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile  colspan="1" rowspan="1" >
+    <div layout-fill style=" width:35rem;background-color: #087C9E;">
+      <div class="button-row">
+       <a  color="dark" [routerLink]="['/maps']"><mat-icon class="white-icon">search</mat-icon></a>
+        <h2>Locate Office</h2>
+      </div>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile  colspan="1" rowspan="1" >
+    <div layout-fill style="width:35rem;background-color: #087C9E;">
+      <div class="button-row">
+       <a   color="dark" [routerLink]="['/graph']"><mat-icon class="white-icon">bar_chart</mat-icon></a>
+        <h2>Job Statistics</h2>
+      </div>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile  colspan="1" rowspan="1" >
+    <div layout-fill style=" width:35rem;background-color: #087C9E;">
+      <div class="button-row">
+       <a  color="dark" [routerLink]="['/hr']"><mat-icon class="white-icon">person_pin</mat-icon></a>
+        <h2>HR Directory</h2>
+      </div>
+  </div>
+  </mat-grid-tile>
+
+
+
+</mat-grid-list>

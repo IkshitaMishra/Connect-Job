@@ -1,0 +1,99 @@
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h1 class="mat-display-1">Dashboard</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <br>
+    <h2 class="mat-display-1">Admin Page</h2>
+  <div class="fil">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+    </mat-form-field>
+  </div>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="jobs" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="jobid" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header > JobId </th>
+          <td mat-cell *matCellDef="let row"> {{row.jobid}} </td>
+        </ng-container>
+
+        <!-- Progress Column -->
+        <ng-container matColumnDef="companyname" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+          <td mat-cell *matCellDef="let row"> {{row.companyname}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="designation" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Designation </th>
+          <td mat-cell *matCellDef="let row"> {{row.designation}} </td>
+        </ng-container>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="description" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+          <td mat-cell *matCellDef="let row"> {{row.description}} </td>
+        </ng-container>
+
+        <!-- Progress Column -->
+        <ng-container matColumnDef="website" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Website </th>
+          <td mat-cell *matCellDef="let row"> {{row.website}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="address" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+          <td mat-cell *matCellDef="let row"> {{row.address}} </td>
+        </ng-container>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="vacancy" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Vacancy </th>
+          <td mat-cell *matCellDef="let row"> {{row.vacancy}} </td>
+        </ng-container>
+
+        <!-- Progress Column -->
+        <ng-container matColumnDef="salary" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary </th>
+          <td mat-cell *matCellDef="let row"> {{row.salary}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit" >
+         <th mat-header-cell *matHeaderCellDef></th>
+         <td mat-cell *matCellDef="let element" [routerLink]="['/job-edit/', element._id]" >
+           <mat-icon>edit</mat-icon>
+         </td>
+       </ng-container>
+      <ng-container matColumnDef="view" >
+       <th mat-header-cell *matHeaderCellDef></th>
+       <td mat-cell *matCellDef="let element" [routerLink]="['/job-details/', element._id]">
+         <mat-icon>view_list</mat-icon>
+       </td>
+     </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator
+                    [pageSize]="7"
+                    [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons>
+
+        </mat-paginator>
+      </div>
+
+</mat-card-content>
+<mat-card-actions>
+  <div class="button-row">
+    <a mat-fab color="dark" [routerLink]="['/job-create']"><mat-icon class="white-icon">add</mat-icon></a>&nbsp;&nbsp;&nbsp;
+      <a mat-fab color="dark" [routerLink]="['/home']"><mat-icon class="white-icon">home</mat-icon></a>
+  </div>
+</mat-card-actions>
+
+
+</mat-card>

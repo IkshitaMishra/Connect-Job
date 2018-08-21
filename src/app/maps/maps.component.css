@@ -1,0 +1,14 @@
+agm-map {
+      height: 35rem;
+      width: 100%;
+    }
+
+    .mat-card-header { justify-content: center;
+      padding-top: 2.2rem;
+    background-color: #087C9E;
+    color: white}
+    h1 { font-family: 'Righteous'; color: white; font-size: 3.5rem;}
+      a {background-color: #087C9E;}
+      .white-icon {
+          color: white;
+      }

@@ -1,0 +1,19 @@
+.mat-card-header { justify-content: center;
+  padding-top: 2.2rem;
+background-color: #087C9E;
+color: white}
+h1 { font-family: 'Righteous'; color: white; font-size: 3.5rem;}
+h2 { font-family: 'Righteous'; color: #087C9E; font-size: 16px; text-decoration: underline; margin-left: 48%}
+.mat-card-content { justify-content: center;margin-left: 32%;}
+:host ::ng-deep .highcharts-series-0 .highcharts-point {
+  fill: #ff0000;
+  stroke: #0000ff;
+}
+:host ::ng-deep .highcharts-series-1 .highcharts-point {
+  fill: #ff0000;
+  stroke: #0000ff;
+}
+a {background-color: #087C9E;}
+.white-icon {
+    color: white;
+}

@@ -1,0 +1,20 @@
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<br>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h1>Job Statistics</h1></mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="margin-top:5rem;">
+      <chart [options]="options" ></chart>
+      <br>
+      <br>
+        <chart [options]="options1" ></chart>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="button-row">
+        <a mat-fab color="dark" [routerLink]="['/home']" style="margin-left:48%;"><mat-icon class="white-icon">home</mat-icon></a>
+    </div>
+  </mat-card-actions>
+</mat-card>
